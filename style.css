@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 20px 0;
+  background: #e9e9e9;
+  font-family: "Courier New", monospace;
+  overflow: hidden;
+}
+
+.game-container {
+  position: relative;
+  width: 950px;
+  height: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+canvas {
+  display: block;
+  border: 2px solid #000;
+  background: url("Image/background.png") no-repeat center center;
+  background-size: cover;
+}
+
+/* HUDのスタイル */
+.hud {
+  display: none; /* デフォルトで非表示にする */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 10;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  max-width: 400px;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.hud .ui {
+  position: static;
+  margin-bottom: 5px;
+}
+
+.hud .controls {
+  position: static;
+  transform: none;
+  text-align: left;
+}
+
+.game-over, .start-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 20;
+}
+
+.start-screen {
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 40px;
+  border: 3px solid white;
+  border-radius: 15px;
+  font-size: 22px;
+}
+
+.start-screen h1 {
+    font-size: 3em;
+    margin: 0 0 20px 0;
+}
+
+.instruction-screen {
+  display: none; /* 最初は非表示 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 20px 30px;
+  border: 3px solid white;
+  border-radius: 15px;
+  width: 500px;
+}
+
+.instruction-screen h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
+
+.instruction-screen .message {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.instruction-screen .box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+.instruction-screen h3 {
+  font-size: 1.2em;
+  margin: 0 0 10px 0;
+}
+
+.instruction-screen p {
+  margin: 5px 0;
+}
+
+.instruction-screen ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.instruction-screen .prompt {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.1em;
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.5; }
+}
+
+.game-over {
+  display: none;
+}
+
+.game-container {
+  position: relative;
+  width: 950px;
+  height: 500px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background: url("Images/background.png") no-repeat center center;
+  background-size: cover;
+}

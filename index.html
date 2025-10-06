@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>鴨川Runサンプル</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="game-container">
+
+    <div class="start-screen" id="startScreen">
+      <h1>鴨川Run</h1>
+      <p>Enterキーでスタート</p>
+    </div>
+
+    <div class="instruction-screen" id="instructionScreen">
+      <h2>遊び方
+      </h2>
+      <p class="message">カップルを避けてトンビを倒し、鴨川を渡り切ろう！</p>
+      <div class="box">
+        <h3>【操作方法🦆】</h3>
+        <li>左右矢印キー：移動</li>
+        <li>スペースキー：ジャンプ</li>
+      </div>
+      <div class="box">
+        <h3>【高得点のコツ】</h3>
+        <ul>
+          <li>早くゴールする</li>
+          <li>コインをたくさんゲットする</li>
+          <li>トンビを踏みつけて倒す</li>
+        </ul>
+      </div>
+      <p class="prompt">Enterキーでゲーム開始</p>
+    </div>
+
+    <div class="hud" id="hud">
+      <div class="ui">
+        <div>ライフ: <span id="lives">3</span></div>
+        <div>経過時間: <span id="time">0</span>秒</div>
+        <div>コイン: <span id="coins">0</span></div>
+        <div>撃破数: <span id="stomped">0</span></div>
+      </div>
+      <div class="controls">左右矢印キー: 移動 | スペース: ジャンプ | R:リスタート</div>
+    </div>
+
+    <div class="game-over" id="gameOver"></div>
+
+    <canvas id="gameCanvas" width="950" height="500"></canvas>
+
+  </div>
+
+  <script src="game2.js"></script>
+</body>
+</html>
